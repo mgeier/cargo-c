@@ -87,6 +87,7 @@ pub fn cinstall(
     let env = &target.env;
 
     let destdir = &paths.destdir;
+    dbg!(destdir);
 
     let install_path_lib = append_to_destdir(destdir, &paths.libdir);
     let install_path_pc = append_to_destdir(destdir, &paths.pkgconfigdir);
@@ -97,6 +98,10 @@ pub fn cinstall(
 
     let install_path_bin = append_to_destdir(destdir, &paths.bindir);
 
+    dbg!(&install_path_lib);
+    dbg!(&install_path_pc);
+    dbg!(&install_path_include);
+    dbg!(&install_path_bin);
     fs::create_dir_all(&install_path_lib)?;
     fs::create_dir_all(&install_path_pc)?;
     fs::create_dir_all(&install_path_include)?;
