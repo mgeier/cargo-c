@@ -3,6 +3,7 @@
 
 LDLIBS = `pkg-config --libs example_project`
 CFLAGS = `pkg-config --cflags example_project`
+LDFLAGS = -static
 
 test: run_tests
 	./run_tests
