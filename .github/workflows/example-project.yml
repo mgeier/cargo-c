@@ -103,7 +103,7 @@ jobs:
       - name: Install C API for example project
         working-directory: example-project
         run: |
-          cargo cinstall --verbose --release --prefix /mingw64
+          cargo cinstall --verbose --release
 
       - name: Test usage from C (using Makefile)
         working-directory: example-project/usage-from-c
