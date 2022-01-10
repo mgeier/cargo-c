@@ -91,6 +91,7 @@ jobs:
         with:
           install: >-
             make
+            mingw-w64-x86_64-pkg-config
             mingw-w64-x86_64-rust
       #      mingw-w64-x86_64-cargo-c
 
