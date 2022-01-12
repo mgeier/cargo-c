@@ -1,5 +1,5 @@
 CFLAGS = `pkg-config --cflags example_project_with_subdir`
-LDLIBS = `pkg-config --libs example_project_with_subdir`
+LDLIBS = `pkg-config --libs example_project_with_subdir --static`
 LDFLAGS = -static
 
 test: run_tests
