@@ -1,4 +1,4 @@
-CFLAGS = `pkg-config --cflags example_project`
+CFLAGS = `pkg-config --cflags example_project` -fno-builtin
 LDLIBS = `pkg-config --libs example_project --static`
 LDFLAGS = -static
 
