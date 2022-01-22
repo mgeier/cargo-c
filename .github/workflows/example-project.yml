@@ -49,7 +49,7 @@ jobs:
       - name: Install into temporary location
         working-directory: example-project
         run: |
-          cargo cinstall --verbose --destdir=temp
+          cargo cinstall --verbose --library-type=staticlib --destdir=temp
 
       - name: Copy installed files to /usr/local
         if: startsWith(matrix.os, 'macos') || startsWith(matrix.os, 'ubuntu')
@@ -107,7 +107,7 @@ jobs:
       - name: Install C API for example project
         working-directory: example-project
         run: |
-          cargo cinstall --verbose --release --prefix /mingw64 --target x86_64-pc-windows-gnu
+          cargo cinstall --verbose --library-type=staticlib --release --prefix /mingw64 --target x86_64-pc-windows-gnu
 
       - name: Test usage from C (using Makefile)
         working-directory: example-project/usage-from-c

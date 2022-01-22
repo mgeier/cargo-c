@@ -1,4 +1,4 @@
-LDLIBS = -lexample_project
+LDLIBS = `pkg-config --static --libs example_project_with_subdir`
 
 test: run_tests
 	./run_tests
